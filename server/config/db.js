@@ -12,7 +12,7 @@ const client = new MongoClient(MONGODB_URI,{
 try{
     await client.connect();
     await client.db().command({ping: 1});
-    console.log("Sukses Menghubungkan ke database");
+    console.log("Database berhasil terkoneksi! ");
     
 }catch(err){
     console.error(ee)
