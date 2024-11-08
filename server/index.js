@@ -1,9 +1,12 @@
 import express from 'express'
 import "dotenv/config";
 import {db} from "./config/db.js"
+import userRouter from './routes/user.route.js'
 
 const app = express();
 const PORT = process.env.PORT;
+
+app.use('/api/v1/users', userRouter)
 
 app.get("/", (req, res) => {
     res.status(200).json({
